@@ -1,0 +1,45 @@
+{
+	"manifest_version": 2,
+	"name": "Price Match",
+	"version": "1.11",
+  
+	"description": "Price comparison across Asda, Morrisons",
+  
+	"icons": {
+	  "96": "icons/96.png"
+	},
+  
+	"content_scripts": [
+	  {
+		"matches": ["*://*.asda.com/*","*://*.morrisons.com/*"],
+		"js": ["./stores/stores.js"]
+	  }
+	],
+
+	"web_accessible_resources": [
+		"utils.js"
+	],
+
+	"permissions":[
+		"tabs",
+		"storage",
+		"activeTab",
+		"<all_urls>",
+		"unlimitedStorage"
+	],
+
+	"browser_specific_settings": {
+		"gecko": {
+		  "id": "addon@example.com",
+		  "strict_min_version": "42.0",
+		  "update_url":"https://gjspy.github.io/exts/match/upd_manifest.json"
+		}
+	  },
+
+	  "browser_action": {
+		"default_icon":"icons/96.png",
+		"default_title":"Price Match",
+		"default_popup":"popup/index.html"
+	  }	  
+  }
+  

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../globalstyles.css">
+		<link rel="stylesheet" href="styles.css">
+		<link rel="icon" href="../../icons/96.png">
+	</head>
+	
+	<body>
+		<a id="go-back" style="font-variant: normal; cursor:pointer" hidden>←</a>
+
+		<div id="cont" style="margin-left: auto; display: flex; flex-direction: column; width: 200px;/*!was 180px then fit */">
+			<h1 id="header" style="margin-bottom: 0px; margin-left: auto; margin-top: 0px; width: 100%; text-align: center;">Price Match</h1>
+
+
+			<div id="cmp-info" class="info" style="width: min-content; margin-left: auto; display: none;">
+				<div class="info-flex" style="display: inline-flex; flex-direction: column; width: max-content;">
+					<label id="prod-name" style="display: flex; margin-left: auto; text-align: right;">[NAME]</label>
+					<label id="prod-weight" style="display: flex; margin-left: auto;">[WEIGHT]</label>
+				</div>	
+				<img src="" id="prod-img" width="100" height="100">		
+			</div>
+			
+			<div id="cmp-prices" class="prices" style="display: none; flex-direction: column; width: fit-content; margin-left: auto;">
+				<div id="asda" class="store" style="display: inline-flex">
+					<a class="prod-store" style="color: #146e09; width: fit-content;" target="_blank">ASDA</a>
+					<label class="prod-price" style="margin-left: 10px; display: inline-flex;">£xx.xx</label>
+				</div>
+	
+				<div id="morrisons" class="store" style="display: inline-flex">
+					<a class="prod-store" style="color: #dfa700; width: fit-content;" target="_blank">MORRISONS</a>
+					<label class="prod-price" style="margin-left: 10px; display: inline-flex;">£xx.xx</label>
+				</div>			
+			</div>
+
+
+
+
+			<div id="main-btns" style="width: 100%; display: flex; flex-direction: column;">
+				<button type="button" id="compare">Compare this item</button>
+				<button type="button" id="vfy-match">Re-Match this product</button>
+
+				<div style="width: 100%; display: flex;">
+					<button type="button" id="add-list" style="width: 50%;">Add to list</button>
+					<button type="button" id="view-list" style="width: 50%;">View List</button><br><br>
+				</div>
+				
+				<button type="button" id="debug" style="margin-top: 22px;">Debug Actions</button>
+				
+				<div id="debug-cont">
+					<button id="dmp">Dump Storage</button>
+					<button id="shw-usg">Storage Usage</button>
+					<button id="clr-cache">Clear Cache</button>
+					<button id="clr-job">Clear Job</button>
+					<button id="clr-matches" class="danger">Clear Matches</button>
+					<button id="clr-strg" class="danger">Clear Storage (Dangerous)</button>
+					
+					<input id="import" type="file" accept=".json" hidden>
+					<button id="importBtn" style="grid-column: 1 / 5;" hidden>Import Storage (Overwrites)</button>
+				</div>
+
+				<a id="error" style="text-align: right;"></a><br>
+			</div>
+		</div>
+
+		<ul id="lists"></ul>
+		
+		<script type="module" src="./popup.js"></script>
+	</body>
+</html>

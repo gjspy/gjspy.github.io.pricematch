@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Match</title>
+	<link rel="stylesheet" href="../../globalstyles.css">
+	<link rel="icon" href="../../icons/96.png">
+</head>
+<body>
+	<u><h1>Exact Match</h1></u>
+	<a id="loading">Loading...<br></a>
+	
+	<script src="match.js"></script>
+</body>
+
+<li class="row-x" hidden>
+	<input class="result-box" type="checkbox" disabled="">
+	<img src="" class="prod-img" width="100" height="100">
+	<div class="result-txt" style="display: inline-flex; flex-direction: column;">
+		<label class="prod-name" style="display:inline-flex">[NAME]</label>
+		<label class="prod-weight" style="display: inline-flex">[WEIGHT]</label>
+		<label class="prod-price" style="display: inline-flexbox">[PRICE]</label>
+		<a class="prod-link" style="display: inline-flex; color: blue;" target="_blank">[LINK]</a>
+	</div>
+</li>
+
+<div id="store-template" class="store" style="display: none; vertical-align: top;">
+	<h2 class="store-title" style="display: inline; margin-left: 40px; text-decoration: underline;"></h2>
+	<a style="margin-left: 15px; color: blue;cursor: pointer;" hidden>Can't find?</a>
+	<br>
+</div>
+
+<div id="match-confirm" hidden>
+	<button id="confirm-btn">Confirm Match</button><br>
+	<a id="confirm-message"></a>
+</div>
+
+</html>

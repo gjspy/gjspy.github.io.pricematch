@@ -1,0 +1,19 @@
+#debug-cont {
+	width: 100%;
+	grid-template-columns: repeat(4,25%);
+	gap: 0px;
+	display: none;
+	grid-auto-flow: row;
+}
+
+#debug-cont > button:nth-child(odd) {
+	grid-column: 1 / 3;
+}
+
+#debug-cont > button:nth-child(even) {
+	grid-column: 3 / 5;
+}
+
+.danger {
+	background-color: red;
+}
