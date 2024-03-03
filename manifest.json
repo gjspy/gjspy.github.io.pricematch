@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Price Match",
-	"version": "1.11",
+	"version": "1",
   
 	"description": "Price comparison across Asda, Morrisons",
   
@@ -32,7 +32,7 @@
 		"gecko": {
 		  "id": "addon@example.com",
 		  "strict_min_version": "42.0",
-		  "update_url":"https://gjspy.github.io/exts/match/upd_manifest.json"
+		  "update_url":"https://gjspy.github.io/price-match/version.json"
 		}
 	  },
 
